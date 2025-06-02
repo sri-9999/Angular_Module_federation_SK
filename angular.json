@@ -50,7 +50,7 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all",
+							"outputHashing": "none",
 							"extraWebpackConfig": "projects/mfe1-host/webpack.prod.config.js"
 						},
 						"development": {
@@ -157,7 +157,7 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all",
+							"outputHashing": "none",
 							"extraWebpackConfig": "projects/mfe2-search/webpack.prod.config.js"
 						},
 						"development": {
@@ -265,7 +265,7 @@
 									"maximumError": "4kb"
 								}
 							],
-							"outputHashing": "all",
+							"outputHashing": "none",
 							"extraWebpackConfig": "projects/mfe3-bookmark/webpack.prod.config.js"
 						},
 						"development": {
