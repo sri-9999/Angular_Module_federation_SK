@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FlightSearchRoutingModule } from './flight-search-routing.module';
 import { FlightSearchComponent } from './flight-search.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { FlightSearchComponent } from './flight-search.component';
   ],
   imports: [
     CommonModule,
-    FlightSearchRoutingModule
+    FlightSearchRoutingModule,
+    HttpClientModule
   ]
 })
 export class FlightSearchModule { }

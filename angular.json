@@ -253,6 +253,12 @@
 					},
 					"configurations": {
 						"production": {
+							"buildOptimizer": true,
+							"optimization": true,
+							"vendorChunk": false,
+							"extractLicenses": false,
+							"sourceMap": true,
+							"namedChunks": false,
 							"budgets": [
 								{
 									"type": "initial",
@@ -269,12 +275,12 @@
 							"extraWebpackConfig": "projects/mfe3-bookmark/webpack.prod.config.js"
 						},
 						"development": {
-							"buildOptimizer": false,
-							"optimization": false,
-							"vendorChunk": true,
+							"buildOptimizer": true,
+							"optimization": true,
+							"vendorChunk": false,
 							"extractLicenses": false,
 							"sourceMap": true,
-							"namedChunks": true
+							"namedChunks": false
 						}
 					},
 					"defaultConfiguration": "production"
