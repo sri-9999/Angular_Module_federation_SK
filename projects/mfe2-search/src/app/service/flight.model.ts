@@ -5,4 +5,5 @@ export interface Flight {
   departure: string;
   arrival: string;
   price: number;
+  isBookmarked: boolean;
 }

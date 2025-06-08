@@ -9,15 +9,19 @@ import { Flight } from '../service/flight.model';
 })
 export class FlightSearchComponent implements OnInit {
   flights: Flight[] = [];
+  bookmarkedFlights: Flight[] = [];
   loading = true;
   error = '';
 
-  constructor(private flightService: FlightSearchService) {}
+  constructor(private flightService: FlightSearchService) { }
 
   ngOnInit(): void {
     this.flightService.getAllFlights().subscribe({
       next: (data) => {
-        this.flights = data;
+        this.flights = data.map(flight => ({
+          ...flight,
+          isBookmarked: flight.isBookmarked ?? false
+        }));
         this.loading = false;
       },
       error: (err) => {
@@ -26,4 +30,17 @@ export class FlightSearchComponent implements OnInit {
       }
     });
   }
+
+  bookmarkFlightWhenUserClicks(flight: Flight): void {
+    flight.isBookmarked = !flight.isBookmarked;
+    // Optionally, call API here to persist the change
+    // this.flightService.updateBookmarkStatus(flight.flightNumber, flight.isBookmarked).subscribe();
+  }
+
+  fetchFlight(flightNumber: string) {
+    this.flightService.getFlight(flightNumber).subscribe(data => {
+      this.bookmarkedFlights.push(data);
+    });
+  }
+
 }

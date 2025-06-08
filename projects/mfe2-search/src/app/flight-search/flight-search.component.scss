@@ -121,3 +121,9 @@
 .flight-table td:last-child {
   border-right: none; // <-- Remove right border for last column
 }
+
+.bookmark-icon {
+  font-size: 2rem;
+  /* Optional: add color for better visibility */
+  color: #f5b301; /* gold */
+}

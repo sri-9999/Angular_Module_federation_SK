@@ -1,12 +1,16 @@
 <div class="flight-search-container">
+
   <h2>Search & Book Your Flight</h2>
+
   <p>
     Welcome to the Flight Search page!<br>
     Here you can explore available flights, compare timings and prices, and choose the best option for your journey.<br>
     Select a flight from the list below to start your booking process.
   </p>
+
   <div *ngIf="loading">Loading flights...</div>
   <div *ngIf="error" class="error">{{ error }}</div>
+
   <div class="flight-table-wrapper" *ngIf="!loading && !error">
     <table class="flight-table">
       <thead>
@@ -17,6 +21,7 @@
           <th>Departure</th>
           <th>Arrival</th>
           <th>Price</th>
+          <th>Bookmark</th> <!-- New column for bookmark icon -->
         </tr>
       </thead>
       <tbody>
@@ -27,6 +32,16 @@
           <td>{{ flight.departure }}</td>
           <td>{{ flight.arrival }}</td>
           <td>₹{{ flight.price }}</td>
+          <td>
+            <!-- Bookmark icon, you can use an emoji, SVG, or font icon library like FontAwesome -->
+            <span class="bookmark-icon" (click)="bookmarkFlightWhenUserClicks(flight)" title="Bookmark this flight"
+              style="cursor:pointer;">
+              {{ flight.isBookmarked ? '\u2605' : '\u2606' }}
+              <!-- Unicode star (☆), or use &#9733; for filled star (★) -->
+            </span>
+          </td>
+
+
         </tr>
       </tbody>
     </table>
