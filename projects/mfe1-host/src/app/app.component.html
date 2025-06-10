@@ -1,15 +1,18 @@
-
 <!-- <app-home></app-home> -->
 
-<!-- Nav bar-->
 <nav class="navbar">
-  <div class="logo">✈️ Flight Booker</div>
   <ul>
-    <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-    <li><a routerLink="/search" routerLinkActive="active">Search Flights</a></li>
-    <li><a routerLink="/bookings" routerLinkActive="active">My Bookings</a></li>
-    <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <div class="logo">✈️ Flight Booker</div>
+    <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/manageUsers" routerLinkActive="active">Manage Users</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/search" routerLinkActive="active">Search Flights</a></li>
+    <li *ngIf="isLoggedIn"><a routerLink="/bookings" routerLinkActive="active">My Bookings</a></li>
+  </ul>
+  <ul>
+    <li><a routerLink="/" routerLinkActive="active">About</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/register" routerLinkActive="active">New User? Register</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
   </ul>
 </nav>
 <router-outlet></router-outlet>
@@ -23,5 +26,3 @@
 
 <h2>Bookmarks (MFE3 as Web Component)..mf1</h2>
 <bookmark-widget></bookmark-widget> -->
-
-

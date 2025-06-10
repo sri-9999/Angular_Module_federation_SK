@@ -5,6 +5,7 @@ import { createCustomElement } from '@angular/elements';
 import { AppComponent } from './app.component';
 import { BookmarkComponent } from './bookmark/bookmark.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   //bootstrap: [AppComponent],

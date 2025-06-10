@@ -25,3 +25,30 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+--------------------------------------
+--------------------------------------
+-- To run this project.
+npm run start:all
+
+Application will run in port 4100.
+visit : http://localhost:4100/
+--------------------------------------
+--------------------------------------
+
+host app: mfe1-host: http://localhost:4100/
+mfe app: mfe2-search: http://localhost:4200/
+webComponent mfe: mfe3-bookmark: http://localhost:4300/
+
+---------------------------------------
+---------------------------------------
+-- Pre populated user name and password to login
+--------------------------------------
+--------------------------------------
+username: Admin
+password: Admin@1234
+---------------------------------------
+---------------------------------------
+username: User
+password: User@1234
+---------------------------------------
+---------------------------------------

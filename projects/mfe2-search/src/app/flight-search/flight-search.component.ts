@@ -34,7 +34,10 @@ export class FlightSearchComponent implements OnInit {
   bookmarkFlightWhenUserClicks(flight: Flight): void {
     flight.isBookmarked = !flight.isBookmarked;
     // Optionally, call API here to persist the change
-    // this.flightService.updateBookmarkStatus(flight.flightNumber, flight.isBookmarked).subscribe();
+    this.flightService.bookmarkFlight(flight.flightNumber, true).subscribe(data => {
+      this.bookmarkedFlights.push(data);
+
+    });
   }
 
   fetchFlight(flightNumber: string) {

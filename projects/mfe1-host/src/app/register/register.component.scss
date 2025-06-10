@@ -1,0 +1,65 @@
+/* register.component.scss */
+.register-card {
+  max-width: 400px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  background: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.register-card h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  mat-radio-button {
+    margin-right: 1.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.register-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  button, a {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.mat-form-field {
+  background: #f5f7fa;
+  border-radius: 5px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: transparent;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-outline {
+  color: #bdbdbd;
+}

@@ -30,7 +30,8 @@
 							"projects/mfe1-host/src/assets"
 						],
 						"styles": [
-							"projects/mfe1-host/src/styles.scss"
+							"projects/mfe1-host/src/styles.scss",
+							"node_modules/ngx-toastr/toastr.css"
 						],
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe1-host/webpack.config.js",
@@ -137,7 +138,8 @@
 							"projects/mfe2-search/src/assets"
 						],
 						"styles": [
-							"projects/mfe2-search/src/styles.scss"
+							"projects/mfe2-search/src/styles.scss",
+							"node_modules/ngx-toastr/toastr.css"
 						],
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe2-search/webpack.config.js",
@@ -245,7 +247,8 @@
 							"projects/mfe3-bookmark/src/assets"
 						],
 						"styles": [
-							"projects/mfe3-bookmark/src/styles.scss"
+							"projects/mfe3-bookmark/src/styles.scss",
+							"node_modules/ngx-toastr/toastr.css"
 						],
 						"scripts": [],
 						"extraWebpackConfig": "projects/mfe3-bookmark/webpack.config.js",

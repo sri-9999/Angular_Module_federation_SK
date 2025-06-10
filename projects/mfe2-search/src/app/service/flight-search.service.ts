@@ -35,4 +35,8 @@ export class FlightSearchService {
   deleteFlight(flightNumber: string): Observable<string> {
     return this.http.delete(`${this.apiUrl}/${flightNumber}`, { responseType: 'text' });
   }
+
+  bookmarkFlight(flightNumber: string, bookmark: boolean): Observable<Flight> {
+    return this.http.get<Flight>(`${this.apiUrl}/${flightNumber}`);
+  }
 }

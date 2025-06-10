@@ -7,20 +7,27 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js"
+    "run:all": "node node_modules/@angular-architects/module-federation/src/server/mf-dev-server.js",
+    "start:all": "npm-run-all --parallel start:mfe1-host start:mfe2-search start:mfe3-bookmark",
+    "start:mfe1-host": "ng s mfe1-host",
+    "start:mfe2-search": "ng s mfe2-search",
+    "start:mfe3-bookmark": "ng s mfe3-bookmark"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.0",
+    "@angular/cdk": "^15.2.9",
     "@angular/common": "^15.2.0",
     "@angular/compiler": "^15.2.0",
     "@angular/core": "^15.2.0",
     "@angular/elements": "^15.2.10",
     "@angular/forms": "^15.2.0",
+    "@angular/material": "^15.2.9",
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
     "@webcomponents/custom-elements": "^1.6.0",
+    "ngx-toastr": "^16.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
@@ -38,6 +45,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "ngx-build-plus": "^15.0.0",
+    "npm-run-all": "^4.1.5",
     "typescript": "~4.9.4"
   }
 }

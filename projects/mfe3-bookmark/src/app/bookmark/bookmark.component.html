@@ -1,6 +1,40 @@
-<p>bookmark works!</p>
+<div class="container">
+  <h2>Book Your Flight</h2>
+  <form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+    <label for="from">From</label>
+    <input id="from" type="text" formControlName="from" placeholder="Departure city" required>
+    <div *ngIf="flightForm.get('from')?.invalid && flightForm.get('from')?.touched" class="error">
+      Departure city is required.
+    </div>
 
-<div style="border: 1px solid #1976d2; padding: 1rem; border-radius: 8px;">
-  <h3>Bookmarks Widget (from MFE3)</h3>
-  <p>This is rendered by the BookmarkComponent as a web component.</p>
+    <label for="to">To</label>
+    <input id="to" type="text" formControlName="to" placeholder="Destination city" required>
+    <div *ngIf="flightForm.get('to')?.invalid && flightForm.get('to')?.touched" class="error">
+      Destination city is required.
+    </div>
+
+    <label for="date">Date</label>
+    <input id="date" type="date" formControlName="date" required>
+    <div *ngIf="flightForm.get('date')?.invalid && flightForm.get('date')?.touched" class="error">
+      Date is required.
+    </div>
+
+    <label for="passengers">Passengers</label>
+    <select id="passengers" formControlName="passengers" required>
+      <option value="1">1 Adult</option>
+      <option value="2">2 Adults</option>
+      <option value="3">3 Adults</option>
+      <option value="4">4 Adults</option>
+    </select>
+
+    <button type="submit" class="btn-book" [disabled]="flightForm.invalid">Book Flight</button>
+  </form>
+
+  <div class="summary" *ngIf="bookingSummary">
+    <strong>Booking Confirmed!</strong><br>
+    <b>From:</b> {{ bookingSummary.from }}<br>
+    <b>To:</b> {{ bookingSummary.to }}<br>
+    <b>Date:</b> {{ bookingSummary.date }}<br>
+    <b>Passengers:</b> {{ bookingSummary.passengers }}
+  </div>
 </div>
