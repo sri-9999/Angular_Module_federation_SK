@@ -9,3 +9,9 @@ const routes: Routes = [{ path: '', component: FlightSearchComponent }];
   exports: [RouterModule]
 })
 export class FlightSearchRoutingModule { }
+
+// @NgModule({
+//   imports: [RouterModule.forChild(routes)],
+//   exports: [RouterModule]
+// })
+// export class FlightSearchRoutingModule { }
