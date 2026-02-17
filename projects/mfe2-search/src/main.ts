@@ -1,2 +1,2 @@
 import('./bootstrap')
-	.catch(err => console.error(err ORRRRR));
+	.catch(err => console.error(err));
